@@ -13,7 +13,7 @@ jobs:
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
-        
+
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with: 
@@ -26,5 +26,5 @@ jobs:
         with:
           context: .
           push: true
-          # repository: ${{ secrets.DOCKER_USERNAME }}/gitopsfc
+          repository: ${{ secrets.DOCKER_USERNAME }}/gitopsfc
           tags: ${{ secrets.DOCKER_USERNAME }}/gitopsfc:${{ github.sha }},${{ secrets.DOCKER_USERNAME }}/gitopsfc:latest
