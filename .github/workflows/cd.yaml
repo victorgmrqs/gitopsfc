@@ -11,10 +11,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build and push image to Dockerhub
-        uses: docker/build-push-action@v6
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
         with: 
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: ${{ secrets.DOCKER_USERNAME }}/gitopsfc
-          tags: ${{ github.sha }}, latest
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          # repository: ${{ secrets.DOCKER_USERNAME }}/gitopsfc
+          tags: ${{ secrets.DOCKER_USERNAME }}/gitopsfc:${{ github.sha }},${{ secrets.DOCKER_USERNAME }}/gitopsfc:latest
