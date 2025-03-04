@@ -4,10 +4,13 @@ kind: Kustomization
 resources:
 - deployment.yaml
 - service.yaml
-images:
 # - name: med-record
 #   newName: vgmarques/med-record
 #   newTag: newversion
+images:
 - name: goserver
   newName: vgmarques/gitopsfc
   newTag: 34ef0f0e187c641d05a59c0c3e2407a8f76a6abb
+- name: vgmarques/gitopsfc
+  newName: vgmarques/gitopsfc
+  newTag: 233f4b44d1e8d82edaffff80d3ab8814695dc9bd
