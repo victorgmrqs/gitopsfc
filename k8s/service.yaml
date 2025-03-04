@@ -4,7 +4,8 @@ metadata:
   name: med-record-service
 spec:
   selector:
-    app: med-record
+    # app: med-record
+    app: goserver
   ports:
   - port: 80
     targetPort: 3000
