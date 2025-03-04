@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: med-record
+spec:
+  selector:
+    matchLabels:
+      app: med-record
+  template:
+    metadata:
+      labels:
+        app: med-record
+    spec:
+      containers:
+      - name: med-record
+        image: med-record
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        # ports:
+        # - containerPort: 3000
