@@ -2,6 +2,8 @@ import pino from 'pino';
 
 import { env } from '@env/index';
 
+const isTestEnv = process.env.NODE_ENV === 'test';
+
 const prodLogger = pino({
   level: 'info',
   formatters: {
@@ -18,12 +20,16 @@ const prodLogger = pino({
 
 const devLogger = pino({
   level: 'debug',
-  transport: {
-    target: 'pino-pretty',
-    options: {
-      ignore: 'pid,hostname',
-    },
-  },
+  ...(isTestEnv
+    ? {}
+    : {
+        transport: {
+          target: 'pino-pretty',
+          options: {
+            colorize: true,
+          },
+        },
+      }),
 });
 
 const loggerInstance = env.NODE_ENV === 'dev' ? devLogger : prodLogger;
