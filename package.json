@@ -1,0 +1,31 @@
+{
+  "name": "med-record",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "rm -rf build && tsup --out-dir build",
+    "start": "node ./build/app.cjs",
+    "dev": "tsx watch src/app.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@fastify/cors": "11.0.0",
+    "@fastify/swagger": "9.4.2",
+    "@fastify/swagger-ui": "5.2.2",
+    "dotenv": "^16.4.7",
+    "fastify": "5.2.1",
+    "reflect-metadata": "0.2.2",
+    "tsyringe": "4.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "axios": "1.8.1",
+    "tsup": "8.4.0",
+    "tsx": "4.19.3",
+    "typescript": "^5.0.0",
+    "vite-tsconfig-paths": "5.1.4",
+    "vitest": "3.0.7",
+    "zod": "3.24.2"
+  }
+}

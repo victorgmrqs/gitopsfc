@@ -1,24 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: goserver
-  # name: med-record
+  name: med-record
 spec:
   selector:
     matchLabels:
-      app: goserver
-      # app: med-record
+      app: med-record
   template:
     metadata:
       labels:
-        app: goserver
-        # app: med-record
+        app: med-record
     spec:
       containers:
-      - name: goserver
-        image: goserver
-      # - name: med-record
-        # image: med-record
+      - name: med-record
+        image: med-record
         resources:
           limits:
             memory: "128Mi"

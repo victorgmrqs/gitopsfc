@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: med-record-service
 spec:
-  type: LoadBalancer
+  # type: LoadBalancer
   selector:
-    # app: med-record
-    app: goserver
+    app: med-record
   ports:
   - port: 80
     targetPort: 3000
