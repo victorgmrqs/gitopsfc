@@ -7,4 +7,4 @@ resources:
 images:
 - name: goserver
   newName: vgmarques/gitopsfc
-  newTag: 5aaa6572dd49cc6547018027c0c063cd1240a6c7
+  newTag: dd81faaf9fd84f9da7dd6ef4b6106802e1a8e418
