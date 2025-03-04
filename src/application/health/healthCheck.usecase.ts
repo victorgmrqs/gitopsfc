@@ -1,8 +1,7 @@
-import { env } from "@env/index";
+import { env } from '@env/index';
+import logger from '@shared/logger';
 
 export const healthCheck = (): string => {
-  // Lógica de negócio: aqui pode haver verificações de dependências, etc.
-  // Neste exemplo, apenas retorna 'OK'.
-  console.log(env.NODE_ENV)
+  logger.info(`Health check for evironment: ${env.NODE_ENV}`);
   return 'OK';
 };

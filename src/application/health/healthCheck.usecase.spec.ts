@@ -1,6 +1,5 @@
-// import { healthCheck } from './healthCheck.usecase';
-
 import { describe, expect, it } from 'vitest';
+
 import { healthCheck } from './healthCheck.usecase';
 
 describe('healthCheck', () => {
