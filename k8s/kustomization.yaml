@@ -10,4 +10,4 @@ images:
   newTag: newversion
 - name: vgmarques/gitopsfc
   newName: vgmarques/gitopsfc
-  newTag: 9c60e76528c31ec4f71b2de205d899c70ffc0f12
+  newTag: 34ef0f0e187c641d05a59c0c3e2407a8f76a6abb
