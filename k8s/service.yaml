@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: med-record-service
 spec:
+  type: LoadBalancer
   selector:
     # app: med-record
     app: goserver
