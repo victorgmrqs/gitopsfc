@@ -5,9 +5,13 @@ resources:
 - deployment.yaml
 - service.yaml
 images:
-- name: med-record
-  newName: vgmarques/med-record
-  newTag: newversion
-- name: vgmarques/gitopsfc
+# - name: med-record
+#   newName: vgmarques/med-record
+#   newTag: newversion
+- name: goserver
   newName: vgmarques/gitopsfc
   newTag: 9c60e76528c31ec4f71b2de205d899c70ffc0f12
+# kubectl -n argodc get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+# pass
+# EJFBSWdlLZF0x2SS
+# newTag: 9c60e76528c31ec4f71b2de205d899c70ffc0f12
