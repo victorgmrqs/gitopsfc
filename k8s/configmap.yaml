@@ -4,6 +4,7 @@ metadata:
   name: med-record-config
   namespace: med-record-dev
 data:
-  NODE_ENV: "production"
+  NODE_ENV: "prod"
   API_URL: "https://api.med-record.com"
   LOG_LEVEL: "info"
+  APP_PORT: "3000"
