@@ -2,14 +2,14 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - namespace.yaml
-  - deployment.yaml
-  - service.yaml
-  - configmap.yaml
-  - ingress.yaml
-  - hpa.yaml
+- namespace.yaml
+- deployment.yaml
+- service.yaml
+- configmap.yaml
+- ingress.yaml
+- hpa.yaml
 
 images:
-  - name: vgmarques/gitopsfc
-    newName: vgmarques/gitopsfc
-    newTag: d8d85735569e65bd483956733df55d8b81f6e66b
+- name: vgmarques/gitopsfc
+  newName: vgmarques/gitopsfc
+  newTag: 75e8d7949d03e83a70e90daec1b4989cb9408379
