@@ -1,6 +1,6 @@
 import Fastify from 'fastify';
 
-import logger from '@shared/logger';
+import logger from 'infra/logger';
 
 import { healthHandler } from '../../ports/in/health/health.controller';
 

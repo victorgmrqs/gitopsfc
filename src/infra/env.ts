@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import { z } from 'zod';
 
-import AppError from '@shared/index';
+import AppError from '@shared/errors/AppError';
 
 const envSchema = z.object({
   NODE_ENV: z.enum(['dev', 'test', 'prod']),

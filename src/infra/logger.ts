@@ -1,8 +1,8 @@
 import pino from 'pino';
 
-import { env } from '@env/index';
+import { env } from '@infra/env';
 
-const isTestEnv = process.env.NODE_ENV === 'test';
+const isTestEnv = env.NODE_ENV === 'test';
 
 const prodLogger = pino({
   level: 'info',
