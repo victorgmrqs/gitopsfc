@@ -12,4 +12,4 @@ resources:
 images:
 - name: vgmarques/gitopsfc
   newName: vgmarques/gitopsfc
-  newTag: 75e8d7949d03e83a70e90daec1b4989cb9408379
+  newTag: ebc09029f42799782e12e49c703b3377fa8e9fc2
