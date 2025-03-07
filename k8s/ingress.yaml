@@ -5,8 +5,8 @@ metadata:
   namespace: med-record-dev
   annotations:
     kubernetes.io/ingress.class: "nginx"
-    # cert-manager.io/cluster-issuer: "letsencrypt"
-    # ingress.kubernetes.io/force-ssl-redirect: "true"
+    cert-manager.io/cluster-issuer: "letsencrypt"
+    ingress.kubernetes.io/force-ssl-redirect: "true"
     nginx.ingress.kubernetes.io/proxy-body-size: "50m"
     nginx.ingress.kubernetes.io/proxy-connect-timeout: "300"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "300"
@@ -24,7 +24,7 @@ spec:
                 name: med-record-service
                 port:
                   number: 80
-  # tls:
-  # - hosts:
-  #   - api.med-record.com
-  #   secretName: med-record-tls
+  tls:
+    - hosts:
+        - api.med-record.com
+      secretName: med-record-tls

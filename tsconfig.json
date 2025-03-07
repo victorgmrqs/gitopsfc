@@ -9,7 +9,7 @@
           "@repositories/*": ["repositories/*"],
           "@shared/*": ["shared/*"],
           "@routes/*": ["routes/*"],
-          "@env/*": ["env/*"],
+          "@infra/*": ["infra/*"],
           "@tests/*": ["tests/*"]
       },
       "outDir": "./build",
