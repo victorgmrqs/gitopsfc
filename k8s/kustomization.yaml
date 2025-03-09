@@ -13,3 +13,6 @@ images:
 - name: vgmarques/gitopsfc
   newName: vgmarques/gitopsfc
   newTag: ebc09029f42799782e12e49c703b3377fa8e9fc2
+- name: vgmarques/med-record
+  newName: vgmarques/med-record
+  newTag: 482a85eb8f6eb1edcb192c9ec7a9a3e3ad86f568
